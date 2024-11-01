@@ -28,5 +28,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
-        publish_branch: gh-pages
+        publish_branch: main  # Deploy to the main branch
+        publish_dir: ./build  # The directory where your static site is generated
+        keep_files: true  # Optional: keeps other files in the main branch root
